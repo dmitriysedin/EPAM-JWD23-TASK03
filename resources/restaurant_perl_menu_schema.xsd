@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.dmitriysedin.by/epam/jwd23/task03"
+        xmlns:tns = "http://www.dmitriysedin.by/epam/jwd23/task03">
+    <element name="menues" type="tns:menuesType"/>
+    <complexType name="menuesType">
+        <sequence>
+            <element name="menu" type="tns:menuType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="menuType">
+        <sequence>
+            <element name="menu-name" type="string" default="Основное меню"/>
+            <element name="menu-annotation" type="string" minOccurs="0"/>
+            <element name="assortment" type="tns:assortmentType" maxOccurs="unbounded">
+            </element>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+        <attribute name="currency" type="string" use="required"/>
+    </complexType>
+    <complexType name="assortmentType">
+        <sequence>
+            <element name="assortment-name" default="Основной ассортимент">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="Основной ассортимент"/>
+                        <enumeration value="Холодные закуски"/>
+                        <enumeration value="Горячие закуски"/>
+                        <enumeration value="Завтраки"/>
+                        <enumeration value="Салаты"/>
+                        <enumeration value="Супы"/>
+                        <enumeration value="Рыбные блюда"/>
+                        <enumeration value="Мясные блюда"/>
+                        <enumeration value="Гарниры"/>
+                        <enumeration value="Блюда на мангале"/>
+                        <enumeration value="От шеф-повара"/>
+                        <enumeration value="Приложение"/>
+                        <enumeration value="Десерт"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="assortment-annotation" type="string" minOccurs="0"/>
+            <element name="dish" type="tns:dishType" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+    </complexType>
+    <complexType name="dishType">
+        <sequence>
+            <element name="dish-name" type="string"/>
+            <element name="dish-annotation" type="string" minOccurs="0"/>
+            <element name="dish-extra-description" type="string" minOccurs="0"/>
+            <element name="dish-specification" type="tns:dishSpecificationType" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+    </complexType>
+    <complexType name="dishSpecificationType">
+        <sequence>
+            <element name="dish-description" type="string" minOccurs="0"/>
+            <element name="dish-portion" type="string"/>
+            <element name="dish-price" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

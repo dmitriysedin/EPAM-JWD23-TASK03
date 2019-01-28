@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<myns:menues xmlns:myns="http://www.dmitriysedin.by/epam/jwd23/task03"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.dmitriysedin.by/epam/jwd23/task03 restaurant_perl_menu_schema.xsd">
+    <menu id="menu01" currency="рубль">
+        <menu-name>Основное меню</menu-name>
+        <menu-annotation>Ежедневное основное меню</menu-annotation>
+        <assortment id="assortment01">
+            <assortment-name>Холодные закуски</assortment-name>
+            <assortment-annotation>Не менее 20 блюд</assortment-annotation>
+            <dish id = "dish01">
+                <dish-name>Ассорти баклажаны</dish-name>
+                <dish-annotation>Имеются 3 варианта исполнения</dish-annotation>
+                <dish-extra-description>Жареные баклажаны с помидорами</dish-extra-description>
+                <dish-specification>
+                    <dish-description>1. с помидорами</dish-description>
+                    <dish-portion>100/5</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+                <dish-specification>
+                    <dish-description>2. с чесноком</dish-description>
+                    <dish-portion>100/5</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+                <dish-specification>
+                    <dish-description>3. с орехами</dish-description>
+                    <dish-portion>100/5</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+            </dish>
+            <dish id = "dish02">
+                <dish-name>Ассорти рыбное</dish-name>
+                <dish-specification>
+                    <dish-description>Слабосоленая форель, семга</dish-description>
+                    <dish-portion>100/20/15</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+            </dish>
+            <dish id = "dish03">
+                <dish-name>Лимон</dish-name>
+                <dish-specification>
+                    <dish-portion>100/20/15</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+            </dish>
+        </assortment>
+        <assortment id = "assortment2">
+            <assortment-name>Горячие закуски</assortment-name>
+            <assortment-annotation>Не менее 5 блюд</assortment-annotation>
+            <dish id = "dish04">
+                <dish-name>Жульен</dish-name>
+                <dish-specification>
+                    <dish-description>1. с курицей</dish-description>
+                    <dish-portion>120/1</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+                <dish-specification>
+                    <dish-description>2. с грибами</dish-description>
+                    <dish-portion>120/1</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+            </dish>
+            <dish id = "dish05">
+                <dish-name>Лобио с шампиньонами</dish-name>
+                <dish-specification>
+                    <dish-description>Фасоль с шампиньонами и грецким орехом</dish-description>
+                    <dish-portion>150/5</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+            </dish>
+            <dish id = "dish06">
+                <dish-name>Сюрприз</dish-name>
+                <!-- вставить ссылку на фото-->
+                <dish-specification>
+                    <dish-portion>1 шт</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+            </dish>
+        </assortment>
+        <assortment id = "assortment3">
+            <assortment-name>Завтраки</assortment-name>
+            <assortment-annotation>Не менее 3 блюд, подаются до 11-00 в будние дни</assortment-annotation>
+            <dish id = "dish07">
+                <dish-name>Глазунья</dish-name>
+                <dish-specification>
+                    <dish-description>2 яйца (на выбор: ветчина, сыр, помидоры)</dish-description>
+                    <dish-portion>150</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+            </dish>
+            <dish id = "dish08">
+                <dish-name>Омлет</dish-name>
+                <dish-specification>
+                    <dish-portion>100</dish-portion>
+                    <dish-price>10</dish-price>
+                </dish-specification>
+            </dish>
+        </assortment>
+    </menu>
+</myns:menues>
